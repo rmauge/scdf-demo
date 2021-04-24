@@ -47,4 +47,12 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/rmauge/scdf-demo</url>
+        </repository>
+    </distributionManagement>
 </project>
