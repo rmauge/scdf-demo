@@ -30,7 +30,7 @@ public class Sender {
 
     @Scheduled(fixedDelay = 1000)
     public void sendEvents() {
-        Signal signal = restTemplate.getForObject("http://aarp-analytics.apps.pcfone.io/api/signal", Signal.class);
+        Signal signal = restTemplate.getForObject(polledURL, Signal.class);
 
         this.source.output().send(MessageBuilder.withPayload(signal).build());
     }
